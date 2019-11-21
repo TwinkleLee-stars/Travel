@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <div class="header-left"><span class="back-icon"> &#xe8b5; </span></div>
-    <div class="header-input"><span class="search-icon">&#xe86e;</span>输入城市/景点/游玩主题</div>
-    <div class="header-right">城市<span class="arrow-down-icon">&#xe649;</span></div>
+    <div class="header-left"><span class="iconfont back-icon"> &#xe8b5; </span></div>
+    <div class="header-input"><span class="iconfont">&#xe86e;</span>输入城市/景点/游玩主题</div>
+    <div class="header-right">城市<span class="iconfont">&#xe649;</span></div>
   </div>
 </template>
 
@@ -21,6 +21,11 @@ export default{
     .header-left
       width: .64rem;
       float: left;
+      .back-icon
+        display: block;
+        font-size: .4rem;
+        text-align: center;
+        padding-left: .3rem;
     .header-input
       flex: 1;
       border-radius: .1rem;
