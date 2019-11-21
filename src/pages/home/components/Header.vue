@@ -13,11 +13,12 @@ export default{
 </script>
 
 <style lang="stylus" scoped>
+  @import '~styles/varibles.styl'
   .header
     display: flex;
     line-height: .86rem;
     color: #fff;
-    background-color: #00bcd4;
+    background-color: $bcColor;
     .header-left
       width: .64rem;
       float: left;
