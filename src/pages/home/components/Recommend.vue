@@ -1,7 +1,7 @@
 <template>
   <div class="recommend">
     <div class="title">热销推荐</div>
-    <div class="item border-bottom" v-for="item in list" :key="item.id">
+    <div class="item border-bottom" v-for="item in itemList" :key="item.id">
       <img class="item-img" :src="item.url"/>
       <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,12 +17,24 @@ export default{
   name: 'HomeRecommend',
   data () {
     return {
+      itemList: [{
+        id: '001',
+        url: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
+        title: '故宫',
+        desc: '东方宫殿建筑代表，世界宫殿建筑典范'
+      }, {
+        id: '002',
+        url: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
+        title: '故宫',
+        desc: '东方宫殿建筑代表，世界宫殿建筑典范'
+      }, {
+        id: '003',
+        url: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',
+        title: '故宫',
+        desc: '东方宫殿建筑代表，世界宫殿建筑典范'
+      }]
     }
-  },
-  props: {
-    list: Array
   }
-
 }
 </script>
 

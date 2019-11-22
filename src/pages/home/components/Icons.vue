@@ -20,17 +20,50 @@ export default{
     return {
       swiperOption: {
         mousewheelControl: true
-      }
+      },
+      iconList: [{
+        id: '0001',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/innBnb.png',
+        desc: '民宿客栈'
+      }, {
+        id: '0002',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/bargainflight.png',
+        desc: '低价机票'
+      }, {
+        id: '0003',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/group.png',
+        desc: '特惠酒店'
+      }, {
+        id: '0004',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/haiwai.png',
+        desc: '海外酒店'
+      }, {id: '0005',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/innBnb.png',
+        desc: '民宿客栈'
+      }, {
+        id: '0006',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/bargainflight.png',
+        desc: '低价机票'
+      }, {
+        id: '0007',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/group.png',
+        desc: '特惠酒店'
+      }, {
+        id: '0008',
+        url: 'https://s.qunarzz.com/homenode/images/touchheader/haiwai.png',
+        desc: '海外酒店'
+      }, {
+        id: '0009',
+        url: 'https://picbed.qunarzz.com/7804b43ac02cd0333bd0f866eebd43b3.png',
+        desc: '一日游'
+      }]
     }
-  },
-  props: {
-    list: Array
   },
   computed: {
     pages () {
       var pages = []
       var page
-      this.list.forEach((value, index) => {
+      this.iconList.forEach((value, index) => {
         page = Math.floor(index / 8)
         if (pages[page] == null) {
           pages[page] = []
@@ -46,7 +79,6 @@ export default{
 <style lang="stylus" scoped>
   @import '~styles/mixin.styl'
   .icons
-    margin-top: .2rem;
     width: 100%;
     height: 0;
     padding-bottom: 50%;
