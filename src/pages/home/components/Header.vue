@@ -21,9 +21,9 @@ export default{
   @import '~styles/varibles.styl'
   .header
     display: flex;
-    line-height: .86rem;
+    line-height: $headerHeight;
     color: #fff;
-    background-color: $bcColor;
+    background-color: $bgColor;
     .header-left
       width: .64rem;
       float: left;
