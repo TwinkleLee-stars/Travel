@@ -1,0 +1,53 @@
+<template>
+  <div>
+    <div class="banner" @click="handleWrapperClick">
+      <img class="banner-img" src="http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg">
+    </div>
+    <common-gallary :list=imgs @touch="handleContainerClick" v-show="showContainer"></common-gallary>
+  </div>
+</template>
+
+<script>
+import CommonGallary from 'common/Gallary'
+export default {
+  name: 'DetailBanner',
+  components: {
+    CommonGallary
+  },
+  data () {
+    return {
+      showContainer: false,
+      imgs: [
+        'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg',
+        'http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg'
+      ]
+    }
+  },
+  methods: {
+    handleWrapperClick () {
+      this.showContainer = true
+    },
+    handleContainerClick () {
+      this.showContainer = false
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+  .container swiper >>> swiper-slide
+    bottom : -1rem
+    color: #fff
+  .banner
+    height: 0
+    padding-bottom: 55%
+    overflow: hidden
+  .container
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: #000
+
+</style>
