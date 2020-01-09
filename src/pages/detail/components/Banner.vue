@@ -1,9 +1,16 @@
 <template>
   <div>
     <div class="banner" @click="handleWrapperClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg">
+      <img class="banner-img" :src="bannerImg">
+      <div class="img-info">
+        <div class="info-title">{{ sightName }}</div>
+        <div class="info-number">
+          <span class="info-icon"></span>
+          39
+        </div>
+      </div>
     </div>
-    <common-gallary :list=imgs @touch="handleContainerClick" v-show="showContainer"></common-gallary>
+    <common-gallary :list="gallaryImgs" @touch="handleContainerClick" v-show="showContainer"></common-gallary>
   </div>
 </template>
 
@@ -23,6 +30,11 @@ export default {
       ]
     }
   },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   methods: {
     handleWrapperClick () {
       this.showContainer = true
@@ -39,9 +51,23 @@ export default {
     bottom : -1rem
     color: #fff
   .banner
+    position: relative
     height: 0
     padding-bottom: 55%
     overflow: hidden
+    img
+      width: 100%
+    .img-info
+      padding: 0 .12rem .12rem .12rem
+      color: #fff
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      display: flex
+      .info-title
+        flex: 1
+
   .container
     position: absolute
     top: 0

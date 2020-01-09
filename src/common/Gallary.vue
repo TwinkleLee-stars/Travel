@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" @click="handleClick">
     <div class="wrapper">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item,index) in list" :key="index">
@@ -21,8 +21,10 @@ export default {
         paginationClickable: true,
         mousewheelControl: true,
         loop: true,
+        autoplay: 1500,
         obeserveParents: true,
-        observer: true
+        observer: true,
+        paginationType: 'fraction'
       }
     }
   },
@@ -32,17 +34,20 @@ export default {
     }
   },
   props: {
-    list: {
-      type: Array,
-      default () {
-        return []
-      }
-    }
+    list: Array
   }
 }
 </script>
 
 <style lang="stylus" scoped>
+  .container >>> .swiper-pagination
+    bottom: -1rem
+    color: #fff
+  .container >>> .swiper-container
+    overflow: visible
+  .container >>> img
+    width: 100%
+
   .container
     display: flex
     flex-direction: column
@@ -54,7 +59,7 @@ export default {
     left: 0
     background: #000
     .wrapper
-      overflow: hidden
+      overflow: visible
       width: 100%
       height: 0
       padding-bottom: 100%
