@@ -21,7 +21,6 @@ export default {
         paginationClickable: true,
         mousewheelControl: true,
         loop: true,
-        autoplay: 1500,
         obeserveParents: true,
         observer: true,
         paginationType: 'fraction'
@@ -58,6 +57,7 @@ export default {
     right: 0
     left: 0
     background: #000
+    z-index:999
     .wrapper
       overflow: visible
       width: 100%

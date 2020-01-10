@@ -4,7 +4,6 @@
       <span class="iconfont back-icon"> &#xe8b5; </span>
     </router-link>
     <div class="header" v-show="isShow" :style="style">景点详情</div>
-    </div>
   </div>
 </template>
 
@@ -21,7 +20,7 @@ export default {
   },
   methods: {
     changeIsShow () {
-      const top = document.documentElement.scrollTop 
+      const top = document.documentElement.scrollTop
       if (top > 60) {
         this.isShow = true
         let opacity = top / 140
